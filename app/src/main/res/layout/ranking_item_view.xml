@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginStart="@dimen/view_margin"
+    android:layout_marginEnd="@dimen/view_margin"
+    >
+
+  <TextView
+      android:id="@+id/rank"
+      style="@style/Base.TextAppearance.AppCompat.Medium"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="01"
+      />
+
+  <TextView
+      android:id="@+id/pts"
+      style="@style/Base.TextAppearance.AppCompat.Medium"
+      android:layout_width="30dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/item_margin_small"
+      android:layout_marginTop="@dimen/item_margin_small"
+      android:layout_marginBottom="@dimen/item_margin_small"
+      android:gravity="center"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="0"
+      />
+
+  <TextView
+      android:id="@+id/gd"
+      style="@style/Base.TextAppearance.AppCompat.Medium"
+      android:layout_width="30dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/item_margin_small"
+      android:gravity="center"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/pts"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="0"
+      />
+
+  <TextView
+      android:id="@+id/l"
+      style="@style/Base.TextAppearance.AppCompat.Medium"
+      android:layout_width="30dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/item_margin_small"
+      android:gravity="center"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/gd"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="0"
+      />
+
+  <TextView
+      android:id="@+id/d"
+      style="@style/Base.TextAppearance.AppCompat.Medium"
+      android:layout_width="30dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/item_margin_small"
+      android:gravity="center"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/l"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="0"
+      />
+
+  <TextView
+      android:id="@+id/w"
+      style="@style/Base.TextAppearance.AppCompat.Medium"
+      android:layout_width="30dp"
+      android:gravity="center"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/item_margin_small"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/d"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="0"
+      />
+
+  <TextView
+      android:id="@+id/p"
+      style="@style/Base.TextAppearance.AppCompat.Medium"
+      android:layout_width="30dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/item_margin_small"
+      android:gravity="center"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/w"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="123"
+      />
+
+  <TextView
+      android:id="@+id/team"
+      style="@style/Base.TextAppearance.AppCompat.Medium"
+      android:layout_width="0dp"
+      android:layout_marginStart="@dimen/item_margin"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/p"
+      app:layout_constraintStart_toEndOf="@id/rank"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="Norwich City"
+      />
+
+</android.support.constraint.ConstraintLayout>

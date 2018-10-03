@@ -1,0 +1,17 @@
+<resources>
+  <string name="app_name">News</string>
+
+  <!--main activity-->
+  <string name="activity.main.news">News</string>
+  <string name="activity.main.scores">Scores</string>
+  <string name="activity.main.standings">Standings</string>
+
+  <!--standings-->
+  <string name="fragment.standings.club">Club</string>
+  <string name="fragment.standings.pts">Pts</string>
+  <string name="fragment.standings.gd">GD</string>
+  <string name="fragment.standings.l">L</string>
+  <string name="fragment.standings.d">D</string>
+  <string name="fragment.standings.w">W</string>
+  <string name="fragment.standings.p">P</string>
+</resources>

@@ -1,0 +1,98 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'org.jetbrains.kotlin.android.extensions'
+
+android {
+  compileSdkVersion 28
+  defaultConfig {
+    applicationId "performtest.com.news"
+    minSdkVersion 21
+    targetSdkVersion 28
+    versionCode 1
+    versionName "1.0"
+    testInstrumentationRunner "performtest.com.news.ui.EspressoRxJUnitRunner"
+  }
+  buildTypes {
+    debug {
+      // debug require running wiremock
+      buildConfigField "String", "HOST", '"http://' + InetAddress.localHost.hostAddress + ':8080/"'
+    }
+    release {
+      signingConfig debug.signingConfig
+      buildConfigField "String", "HOST",
+          "\"http://www.mobilefeeds.performgroup.com/utilities/interviews/techtest/\""
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+      lintOptions {
+        abortOnError false
+      }
+    }
+  }
+  compileOptions {
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+  }
+}
+
+dependencies {
+  androidTestImplementation "com.squareup.rx.idler:rx2-idler:$idlerVersion"
+  androidTestImplementation "com.android.support.test:rules:$testRulesVersion"
+  androidTestImplementation "com.android.support.test:runner:$supportTestVersion"
+  androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoVersion"
+  androidTestImplementation "com.android.support.test.espresso:espresso-contrib:$espressoVersion"
+  implementation fileTree(include: ['*.jar'], dir: 'libs')
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+  testImplementation "junit:junit:$junitVersion"
+  testImplementation "org.mockito:mockito-core:$mockitoCoreVersion"
+  testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotinVersion"
+  implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
+  testImplementation "android.arch.core:core-testing:$archTestingVersion"
+
+  //lifedata
+  implementation "android.arch.lifecycle:runtime:$archCompVersion"
+  implementation "android.arch.lifecycle:extensions:$archCompVersion"
+  kapt "android.arch.lifecycle:compiler:$archCompVersion"
+
+  //dagger
+  kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+  //noinspection OutdatedLibrary
+  implementation "com.google.dagger:dagger-android:$daggerVersion"
+  kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
+  implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+
+  //network
+  implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+  implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+  implementation "com.squareup.retrofit2:adapter-rxjava2:$rxjavaAdapter"
+  implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
+  implementation "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
+  implementation "com.squareup.retrofit2:converter-simplexml:$simpleXMLVersion"
+  implementation "com.squareup.okhttp3:logging-interceptor:$loggingInerceptorVersion"
+
+  //rx
+  implementation "io.reactivex.rxjava2:rxjava:$rxJava"
+  implementation "io.reactivex.rxjava2:rxandroid:$rxAndroid"
+  implementation "io.reactivex.rxjava2:rxkotlin:$rxKotlin"
+  implementation "com.jakewharton.rxbinding2:rxbinding:$rxBinding"
+  implementation "com.github.VictorAlbertos:RxActivityResult:$rxActivityOnResult"
+  implementation "com.tbruyelle.rxpermissions2:rxpermissions:$rxPermissions"
+
+
+  //glide
+  implementation "com.github.bumptech.glide:glide:$glideVersion"
+  kapt "com.github.bumptech.glide:compiler:$glideVersion"
+
+  //utils
+  implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
+  implementation "com.jakewharton.threetenabp:threetenabp:$dateLib"
+  implementation "org.jetbrains.anko:anko-commons:$ankoVersion"
+  implementation "com.afollestad.material-dialogs:core:$materialDialogsVersion"
+  implementation "com.mikepenz:fastadapter:$fastAdapterVersion"
+  implementation "com.mikepenz:fastadapter-extensions-expandable:$fastAdapterVersion"
+  implementation "com.mikepenz:fastadapter-commons:$fastAdapterVersion"
+  implementation "com.mikepenz:fastadapter-extensions:$fastAdapterVersion"
+  implementation "com.asksira.android:dropdownview:$dropDownViewVersion"
+  implementation "com.andkulikov:transitionseverywhere:$transistionVersion"
+}

@@ -1,0 +1,10 @@
+{
+	"request": {
+		"method": "GET",
+		"url": "/standings.xml"
+	},
+	"response": {
+		"status": 200,
+		"bodyFileName": "standings.xml"
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"request": {
+		"method": "GET",
+		"url": "/latestnews.xml"
+	},
+	"response": {
+		"status": 200,
+		"bodyFileName": "news.xml"
+	}
+}

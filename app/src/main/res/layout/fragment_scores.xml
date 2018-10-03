@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_light_background">
+
+  <TextView
+      android:id="@+id/dateHeader"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:background="@color/colorPrimaryDark"
+      android:gravity="center_vertical"
+      android:padding="@dimen/view_margin"
+      android:textColor="@color/white"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="12 April 2013"
+      style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+      />
+
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/matchList"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/dateHeader"
+      />
+</android.support.constraint.ConstraintLayout>

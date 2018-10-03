@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/view_margin"
+    android:background="@color/colorPrimaryDark"
+    >
+
+  <TextView
+      android:id="@+id/club"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="@string/fragment.standings.club"
+      android:textColor="@color/white"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      style="@style/Base.TextAppearance.AppCompat.Medium"
+      />
+
+  <TextView
+      android:id="@+id/pts"
+      android:layout_width="30dp"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/item_margin_small"
+      android:layout_marginStart="@dimen/item_margin_small"
+      android:layout_marginTop="@dimen/item_margin_small"
+      android:gravity="center"
+      android:text="@string/fragment.standings.pts"
+      android:textColor="@color/white"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      style="@style/Base.TextAppearance.AppCompat.Medium"
+      />
+
+  <TextView
+      android:id="@+id/gd"
+      android:layout_width="30dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/item_margin_small"
+      android:gravity="center"
+      android:text="@string/fragment.standings.gd"
+      android:textColor="@color/white"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/pts"
+      app:layout_constraintTop_toTopOf="parent"
+      style="@style/Base.TextAppearance.AppCompat.Medium"
+      />
+
+  <TextView
+      android:id="@+id/l"
+      android:layout_width="30dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/item_margin_small"
+      android:gravity="center"
+      android:text="@string/fragment.standings.l"
+      android:textColor="@color/white"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/gd"
+      app:layout_constraintTop_toTopOf="parent"
+      style="@style/Base.TextAppearance.AppCompat.Medium"
+      />
+
+  <TextView
+      android:id="@+id/d"
+      android:layout_width="30dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/item_margin_small"
+      android:gravity="center"
+      android:text="@string/fragment.standings.d"
+      android:textColor="@color/white"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/l"
+      app:layout_constraintTop_toTopOf="parent"
+      style="@style/Base.TextAppearance.AppCompat.Medium"
+      />
+
+  <TextView
+      android:id="@+id/w"
+      android:layout_width="30dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/item_margin_small"
+      android:gravity="center"
+      android:text="@string/fragment.standings.w"
+      android:textColor="@color/white"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/d"
+      app:layout_constraintTop_toTopOf="parent"
+      style="@style/Base.TextAppearance.AppCompat.Medium"
+      />
+
+  <TextView
+      android:id="@+id/p"
+      android:layout_width="30dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/item_margin_small"
+      android:gravity="center"
+      android:text="@string/fragment.standings.p"
+      android:textColor="@color/white"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/w"
+      app:layout_constraintTop_toTopOf="parent"
+      style="@style/Base.TextAppearance.AppCompat.Medium"
+      />
+
+</android.support.constraint.ConstraintLayout>

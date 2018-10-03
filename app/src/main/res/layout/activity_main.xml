@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainActivity"
+    >
+
+  <FrameLayout
+      android:layout_marginTop="56dp"
+      android:id="@+id/fragmentContainer"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+
+  <com.asksira.dropdownview.DropDownView
+      android:id="@+id/dropdownView"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:arrow_width="24dp"
+      app:bottom_decorator_color="@color/white"
+      app:bottom_decorator_height="4dp"
+      app:divider_color="@color/white"
+      app:dropDownItem_text_color_selected="@color/colorPrimary"
+      app:dropDownItem_text_size_selected="18sp"
+      app:dropdownItem_text_gravity="start"
+      app:expand_include_selected_item="true"
+      app:expansion_style="drawer"
+      app:filter_bar_background_color="@color/colorPrimaryDark"
+      app:filter_text_color="@android:color/white"
+      app:last_item_has_divider="false"
+      app:placeholder_text="Please select"
+      app:arrow_drawable="@drawable/ic_arrow_white"
+      />
+</android.support.constraint.ConstraintLayout>
